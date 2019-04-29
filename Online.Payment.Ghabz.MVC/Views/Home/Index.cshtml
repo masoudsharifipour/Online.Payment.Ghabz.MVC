@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="jumbotron mt-3">
+    <h1>اطلاعات قبض را وارد کنید</h1>
+
+    @using (Html.BeginForm("GenerateGhabz","Home",FormMethod.Post))
+    {
+        <input type="text" class="form-controller" name="ShenaseGhabz" id="ShenaseGhabz" />
+        <input type="text" class="form-controller" name="ShenasePardakht" id="ShenasePardakht" />
+        <input type="submit" />
+    }
+</div>
+

@@ -1,0 +1,50 @@
+﻿@model Online.Payment.Ghabz.MVC.Models.ghabzHistory
+
+@{
+    ViewBag.Title = "Ghabz";
+    Layout = "~/Views/Layout/_Layout.cshtml";
+}
+
+<h2>نمایش جزئیات قبض</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            شناسه قبض
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShenaseGhabz)
+        </dd>
+
+        <dt>
+            شناسه پرداخت
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShenasePardakht)
+        </dd>
+
+        <dt>
+            مبلغ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+           نوع قبض
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
